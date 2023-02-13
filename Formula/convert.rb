@@ -1,25 +1,25 @@
-# Generated with JReleaser 1.4.0 at 2023-02-13T00:38:18.996602779Z
+# Generated with JReleaser 1.4.0 at 2023-02-13T22:39:55.668485249Z
 class Convert < Formula
   desc "Convert your data files"
   homepage "https://github.com/ghokun/convert"
-  version "0.0.1"
+  version "0.0.2"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ghokun/convert/releases/download/v0.0.1/convert-0.0.1-linux-aarch64.zip"
-    sha256 "798e9a9d8c6797c0470f69be53a6cd26c95fcd9f06524d7a9abcac569d01289d"
+    url "https://github.com/ghokun/convert/releases/download/v0.0.2/convert-0.0.2-linux-aarch64.zip"
+    sha256 "f9109f9001ad19f2fc83a7dfd9daf81e476ad5995b0871081350ab72df483764"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ghokun/convert/releases/download/v0.0.1/convert-0.0.1-linux-x86_64.zip"
-    sha256 "d953fcec59c0a06f8baa8f49bc0a960c54b9789e56ec5894710e4554efbdda39"
+    url "https://github.com/ghokun/convert/releases/download/v0.0.2/convert-0.0.2-linux-x86_64.zip"
+    sha256 "472d3e47985ebd96018a8a6319280a28e2b477ae3960385e88aab9ce45630674"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ghokun/convert/releases/download/v0.0.1/convert-0.0.1-darwin-aarch64.zip"
-    sha256 "f15c5c70f57302489121e334a0784ae57932759f95cb63d1df3dfd021763ed8e"
+    url "https://github.com/ghokun/convert/releases/download/v0.0.2/convert-0.0.2-darwin-aarch64.zip"
+    sha256 "33364a9d2f4a94a7abb8d4f8e3131720b96dc61cc234f920eb69ad519c578a57"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ghokun/convert/releases/download/v0.0.1/convert-0.0.1-darwin-x86_64.zip"
-    sha256 "907d8c4ee3caee3f6e0bf96eb32564c0df0b76e3094fe5b5252fbc6a117f8402"
+    url "https://github.com/ghokun/convert/releases/download/v0.0.2/convert-0.0.2-darwin-x86_64.zip"
+    sha256 "dde4d34876eca1f78ca308be309421eb00f1829d55feba5cc977c0b670186ad6"
   end
 
 
@@ -30,6 +30,6 @@ class Convert < Formula
 
   test do
     output = shell_output("#{bin}/convert --version")
-    assert_match "0.0.1", output
+    assert_match "0.0.2", output
   end
 end
