@@ -11,7 +11,7 @@ class Coyote < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ghokun/coyote/releases/download/v0.1.0/coyote_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c948c7766960825d8e9d848a00a05d1e62e516bf8276148cf5b53293f1575caf"
+      sha256 "5876979c166e4d01f7817968ab7ce538007facbc4318e73183e84db3566c7e11"
 
       def install
         bin.install "coyote"
@@ -22,7 +22,7 @@ class Coyote < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ghokun/coyote/releases/download/v0.1.0/coyote_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f0854a3b4bc6f63f0504444d8807399a18fa676176f8535a01a821bea7c4fef7"
+      sha256 "697dad993b7e5e707991f05b3bcf2c06879110bf2e44bcad630f8df331746262"
 
       def install
         bin.install "coyote"
