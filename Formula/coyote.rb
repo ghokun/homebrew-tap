@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.6.0"
+  version "0.7.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.6.0/coyote_Darwin_x86_64.tar.gz"
-      sha256 "bc167e52c10aa708e8245e908c17297bd70c30c748f88ec2738e685a317d3226"
+      url "https://github.com/ghokun/coyote/releases/download/v0.7.0/coyote_Darwin_x86_64.tar.gz"
+      sha256 "c546307cd3d882c99d32b22e30e498aa8dc629ac2371d94320bc979b9008bf75"
 
       def install
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.6.0/coyote_Darwin_arm64.tar.gz"
-      sha256 "2296564983e35151028229985306635aed0a93288ff1c2061c35aa454c3d40b3"
+      url "https://github.com/ghokun/coyote/releases/download/v0.7.0/coyote_Darwin_arm64.tar.gz"
+      sha256 "08391dc7643b5f1a3731057f44ee3c767bf0081501c09e0ea63649b24c2e95d1"
 
       def install
         bin.install "coyote"
@@ -29,16 +29,16 @@ class Coyote < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.6.0/coyote_Linux_arm64.tar.gz"
-      sha256 "a34da4d5d3f5a5391d4a404fba1c72a2ecfd916545ed33c32d0478d2830ba51b"
+      url "https://github.com/ghokun/coyote/releases/download/v0.7.0/coyote_Linux_arm64.tar.gz"
+      sha256 "a59735d5e8bfdbcb97c22e371651e053dcf11dd5d507fda192fadfe2b5eae833"
 
       def install
         bin.install "coyote"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.6.0/coyote_Linux_x86_64.tar.gz"
-      sha256 "06c6e0ca710297454970ee67da23db48f885b63c1b29dfada31aa23a827b2ae9"
+      url "https://github.com/ghokun/coyote/releases/download/v0.7.0/coyote_Linux_x86_64.tar.gz"
+      sha256 "1d998b709aea0f921bb169d4e3becb5f354de2802b7c3e748f9384432803fb6e"
 
       def install
         bin.install "coyote"
