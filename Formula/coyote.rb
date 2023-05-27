@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.8.0"
+  version "0.9.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.8.0/coyote_Darwin_arm64.tar.gz"
-      sha256 "34b36aa5104357293207d1aee8cdb54265dbfd225bf83f6b64d6b41d5077b18d"
+    if Hardware::CPU.intel?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Darwin_x86_64.tar.gz"
+      sha256 "307ef87cd4a34099b7adc804e6c237b35a98a9e4ab0dd5171160fb03457b252f"
 
       def install
         bin.install "coyote"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.8.0/coyote_Darwin_x86_64.tar.gz"
-      sha256 "509e71d79e0f1c5fd3524c2d3acbc9fd3dd3207ddbac7b2577d9312b8e916f05"
+    if Hardware::CPU.arm?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Darwin_arm64.tar.gz"
+      sha256 "ab558be323bbe0ff6345ce2283629557b042c0ea3425a9d94b58c54248a0a626"
 
       def install
         bin.install "coyote"
@@ -28,17 +28,17 @@ class Coyote < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.8.0/coyote_Linux_arm64.tar.gz"
-      sha256 "3496cbdcb3f85870100542d72ce18b2f45a300d915aec41a8da6d9f2659a9452"
+    if Hardware::CPU.intel?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Linux_x86_64.tar.gz"
+      sha256 "6dcf9334ab3bbf94661bff870a020b758022ede15f7d2655ad5ddd793b6e10b3"
 
       def install
         bin.install "coyote"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.8.0/coyote_Linux_x86_64.tar.gz"
-      sha256 "9222f5091c18af14ed9d25782867e9771cf82a81baa775c340786a68f3840bbe"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Linux_arm64.tar.gz"
+      sha256 "ddc1a0b136710f81ca2ac676d34795b179af9e835dbbd63140f7abd29bd970c2"
 
       def install
         bin.install "coyote"
