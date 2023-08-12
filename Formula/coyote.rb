@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.9.0"
+  version "0.9.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Darwin_arm64.tar.gz"
-      sha256 "3908360e05ed42555b15052abfbb33b82ff9910d0d60f43c95fcb4983becf32e"
+    if Hardware::CPU.intel?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Darwin_x86_64.tar.gz"
+      sha256 "d72c0e0f98a16ed6576e8ed8ff9b6a2256d360f8884bd1a7f7b76291edc5bedb"
 
       def install
         bin.install "coyote"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Darwin_x86_64.tar.gz"
-      sha256 "a4d40162d5301887882c9242c45a65a8f14fbbe8f082d486dd6377a70cc94356"
+    if Hardware::CPU.arm?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Darwin_arm64.tar.gz"
+      sha256 "c770ec10d0a85de2ac46a8707645389561f513051601f45232d034dbaefd8fa4"
 
       def install
         bin.install "coyote"
@@ -29,16 +29,16 @@ class Coyote < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Linux_arm64.tar.gz"
-      sha256 "e3677d3187f4cf0f94ff658db98f9c0a33aafc0c8b0028e85277a6877e5df127"
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Linux_arm64.tar.gz"
+      sha256 "67e43c9f3445689df81c0d3460c9a7c786eb83d43dc0baa9cd57536db241c290"
 
       def install
         bin.install "coyote"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.0/coyote_Linux_x86_64.tar.gz"
-      sha256 "e2ebafec234ddf5eaf62fad797a437d88602c545e0d376f9272570c46795cc7c"
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Linux_x86_64.tar.gz"
+      sha256 "a946e7b4bdf6833b077e1ac10286e5457f2d97eb458e416885560478152164b2"
 
       def install
         bin.install "coyote"
