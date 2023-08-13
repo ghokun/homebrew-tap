@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.9.1"
+  version "0.9.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Darwin_x86_64.tar.gz"
-      sha256 "d72c0e0f98a16ed6576e8ed8ff9b6a2256d360f8884bd1a7f7b76291edc5bedb"
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.3/coyote_Darwin_x86_64.tar.gz"
+      sha256 "65c576d580b986e378bbd488598ea51d5c65972611f53583ebabde14323d5842"
 
       def install
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Darwin_arm64.tar.gz"
-      sha256 "c770ec10d0a85de2ac46a8707645389561f513051601f45232d034dbaefd8fa4"
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.3/coyote_Darwin_arm64.tar.gz"
+      sha256 "9aa2378183c74e55034b7c42666290b17c58cf1da6f48e8171aa6b5065d03114"
 
       def install
         bin.install "coyote"
@@ -28,17 +28,17 @@ class Coyote < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Linux_arm64.tar.gz"
-      sha256 "67e43c9f3445689df81c0d3460c9a7c786eb83d43dc0baa9cd57536db241c290"
+    if Hardware::CPU.intel?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.3/coyote_Linux_x86_64.tar.gz"
+      sha256 "db56161f237582cf27141c14f8fa0e4bbb3160b897dca65c0d7c5072513e4b31"
 
       def install
         bin.install "coyote"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.9.1/coyote_Linux_x86_64.tar.gz"
-      sha256 "a946e7b4bdf6833b077e1ac10286e5457f2d97eb458e416885560478152164b2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ghokun/coyote/releases/download/v0.9.3/coyote_Linux_arm64.tar.gz"
+      sha256 "b010b032e673422eae8ee2d4933d0e18ad9c78c894b0c7fd10bca3c0c5537fc6"
 
       def install
         bin.install "coyote"
