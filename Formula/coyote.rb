@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.16.2"
+  version "0.16.3"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/ghokun/coyote/releases/download/v0.16.2/coyote_0.16.2_darwin_amd64v3.tar.gz"
-      sha256 "d9641829247ed67f8f34a81e55007ec4e7b281d0d14c41a28a54377d41c9a097"
+      url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_darwin_amd64v3.tar.gz"
+      sha256 "83a9934aa7d9f3f6976463df1655f57f1d1fe66ce6fd3de4c4250d56e871d795"
 
       def install
         bin.install "coyote"
       end
     end
     on_arm do
-      url "https://github.com/ghokun/coyote/releases/download/v0.16.2/coyote_0.16.2_darwin_arm64.tar.gz"
-      sha256 "cdd20b04465da1c7b2eb0f901a17445c334ca6eab392e67f8cbb5dc5cb3eb583"
+      url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_darwin_arm64.tar.gz"
+      sha256 "53e2681d773028052608fbf634fe9813e28ea13ff79151e3e1d8556e29247ff6"
 
       def install
         bin.install "coyote"
@@ -30,8 +30,8 @@ class Coyote < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ghokun/coyote/releases/download/v0.16.2/coyote_0.16.2_linux_amd64v3.tar.gz"
-        sha256 "53313972a01437d811d5d4b85b7b24469f0ab218a8b8d3e46318f365eb0d3d10"
+        url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_linux_amd64v3.tar.gz"
+        sha256 "10efb8229f7df5ec401763357e7dad99d0d624743d38aa602bf212f260c3dc91"
 
         def install
           bin.install "coyote"
@@ -40,8 +40,8 @@ class Coyote < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ghokun/coyote/releases/download/v0.16.2/coyote_0.16.2_linux_arm64.tar.gz"
-        sha256 "94c5f8f3287cbd234da1b2debe6ad2ddd476d175e0706f3c4f96cf17bc7567b5"
+        url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_linux_arm64.tar.gz"
+        sha256 "b6246e382fc1ef5e696909edf100748b6a45a9d5f25a344257c4d7ef7f5a879c"
 
         def install
           bin.install "coyote"
