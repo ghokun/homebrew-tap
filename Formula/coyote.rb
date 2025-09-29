@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.16.3"
+  version "0.17.0"
   license "Apache-2.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_darwin_amd64v3.tar.gz"
-      sha256 "83a9934aa7d9f3f6976463df1655f57f1d1fe66ce6fd3de4c4250d56e871d795"
+    if Hardware::CPU.intel?
+      url "https://github.com/ghokun/coyote/releases/download/v0.17.0/coyote_0.17.0_darwin_amd64v3.tar.gz"
+      sha256 "4ece22191f0d29a134eb07a3c13d68c62a5c56c3b9a810213775e5804d336e31"
 
       def install
         bin.install "coyote"
       end
     end
-    on_arm do
-      url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_darwin_arm64.tar.gz"
-      sha256 "53e2681d773028052608fbf634fe9813e28ea13ff79151e3e1d8556e29247ff6"
+    if Hardware::CPU.arm?
+      url "https://github.com/ghokun/coyote/releases/download/v0.17.0/coyote_0.17.0_darwin_arm64.tar.gz"
+      sha256 "239036ea18583e03c29c24e64d5c4af6caf9e4873d0aac4eb495ea12ee42f84f"
 
       def install
         bin.install "coyote"
@@ -28,24 +28,18 @@ class Coyote < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_linux_amd64v3.tar.gz"
-        sha256 "10efb8229f7df5ec401763357e7dad99d0d624743d38aa602bf212f260c3dc91"
-
-        def install
-          bin.install "coyote"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ghokun/coyote/releases/download/v0.17.0/coyote_0.17.0_linux_amd64v3.tar.gz"
+      sha256 "6b25bfd2f83c81797260d3c0f5fdfd1bda7e738743d53c1b7e7ae02ad8f0b320"
+      def install
+        bin.install "coyote"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/ghokun/coyote/releases/download/v0.16.3/coyote_0.16.3_linux_arm64.tar.gz"
-        sha256 "b6246e382fc1ef5e696909edf100748b6a45a9d5f25a344257c4d7ef7f5a879c"
-
-        def install
-          bin.install "coyote"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ghokun/coyote/releases/download/v0.17.0/coyote_0.17.0_linux_arm64.tar.gz"
+      sha256 "34ca81196c1df09a7ad92a255598fff0770839746a3d3db7d4eeb8901a63ef8c"
+      def install
+        bin.install "coyote"
       end
     end
   end
