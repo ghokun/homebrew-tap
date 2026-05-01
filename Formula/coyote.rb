@@ -5,21 +5,21 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.19.0"
+  version "0.20.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_darwin_amd64v3.tar.gz"
-      sha256 "24899e6da71cef023eaba29721fe4b4420b659610e1b9e2c515cdfa7419ff68b"
+      url "https://github.com/ghokun/coyote/releases/download/v0.20.0/coyote_0.20.0_darwin_amd64v3.tar.gz"
+      sha256 "908fdb96cdc1a684acdc5654a31103b94db61e2b1c8f7466f0af0ab200234159"
 
       define_method(:install) do
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_darwin_arm64.tar.gz"
-      sha256 "9d3b9b6dbe97cbee9d847b30c2468e8d0054e6407ea61f60960acc99b835cd48"
+      url "https://github.com/ghokun/coyote/releases/download/v0.20.0/coyote_0.20.0_darwin_arm64.tar.gz"
+      sha256 "9d080eaf5df898110d3f7472db386a9fe38cbd7786fc0dad813697134488ffc9"
 
       define_method(:install) do
         bin.install "coyote"
@@ -29,15 +29,15 @@ class Coyote < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_linux_amd64v3.tar.gz"
-      sha256 "6d00a70f6f49b940d096fe2c21679f37468aa3039f12a6eed59cde7120b91f38"
+      url "https://github.com/ghokun/coyote/releases/download/v0.20.0/coyote_0.20.0_linux_amd64v3.tar.gz"
+      sha256 "4e94f5720395b76cb344b8efc94c97cd9747217382de8e33c8a3fe43160e2527"
       define_method(:install) do
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_linux_arm64.tar.gz"
-      sha256 "70dd49f9ea4a065625f2b92f452120a68068bdff08639fea5964d9a088505c15"
+      url "https://github.com/ghokun/coyote/releases/download/v0.20.0/coyote_0.20.0_linux_arm64.tar.gz"
+      sha256 "9c2de28dbe274b4f1bfe5d3c0fd5b1f1a6d35f65cb8549fc802a5af41c564e00"
       define_method(:install) do
         bin.install "coyote"
       end
