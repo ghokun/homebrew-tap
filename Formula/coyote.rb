@@ -5,23 +5,23 @@
 class Coyote < Formula
   desc "Coyote is a RabbitMQ message sink."
   homepage "https://github.com/ghokun/coyote"
-  version "0.18.0"
+  version "0.19.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ghokun/coyote/releases/download/v0.18.0/coyote_0.18.0_darwin_amd64v3.tar.gz"
-      sha256 "c6e5e6561de226bcfbb235b90b73e83076140f4d46dfa9e62ee9f22e73ab1240"
+      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_darwin_amd64v3.tar.gz"
+      sha256 "24899e6da71cef023eaba29721fe4b4420b659610e1b9e2c515cdfa7419ff68b"
 
-      def install
+      define_method(:install) do
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ghokun/coyote/releases/download/v0.18.0/coyote_0.18.0_darwin_arm64.tar.gz"
-      sha256 "ce96900263d9248b0389419fe033332f2ee670904ceefb9ab5afb1b52d83de7d"
+      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_darwin_arm64.tar.gz"
+      sha256 "9d3b9b6dbe97cbee9d847b30c2468e8d0054e6407ea61f60960acc99b835cd48"
 
-      def install
+      define_method(:install) do
         bin.install "coyote"
       end
     end
@@ -29,16 +29,16 @@ class Coyote < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.18.0/coyote_0.18.0_linux_amd64v3.tar.gz"
-      sha256 "d4141a1823b3a8b63d93d0ceadf37f8dde40e376c9ce8c5c756e3b674eb75cf3"
-      def install
+      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_linux_amd64v3.tar.gz"
+      sha256 "6d00a70f6f49b940d096fe2c21679f37468aa3039f12a6eed59cde7120b91f38"
+      define_method(:install) do
         bin.install "coyote"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ghokun/coyote/releases/download/v0.18.0/coyote_0.18.0_linux_arm64.tar.gz"
-      sha256 "ed8c4b8140a8b8c60caae21ac7b48f9ea599ab77ff48fb34dd0364e5020ad7f2"
-      def install
+      url "https://github.com/ghokun/coyote/releases/download/v0.19.0/coyote_0.19.0_linux_arm64.tar.gz"
+      sha256 "70dd49f9ea4a065625f2b92f452120a68068bdff08639fea5964d9a088505c15"
+      define_method(:install) do
         bin.install "coyote"
       end
     end
